@@ -128,7 +128,7 @@ const home = () => {
                         </div>
                         <div className='w-1 h-36 m-5 bg-lime-300'></div>
                         <p className="lg:w-2/5 p-4 w-full leading-relaxed text-gray-500">
-                            We now support 14 popular coding languages. At our core, LeetCode is about developers. Our powerful development tools such as Playground help you test, debug and even write your own projects online.
+                            We now support 14 popular coding languages. At our core, CodeBuzz is about developers. Our powerful development tools such as Playground help you test, debug and even write your own projects online.
                         </p>
                     </div>
                     {/* cards */}
@@ -177,8 +177,8 @@ const home = () => {
                         If you are passionate about tackling some of the most interesting problems around, we would love to hear from you.
                         </p>
                         <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-                        <h2 className="text-gray-900 font-medium title-font tracking-wider text-base">Ayan Saha</h2>
-                        <p className="text-gray-500">Senior Product Designer</p>
+                        <h2 className="text-gray-900 font-medium title-font tracking-wider text-base">Dashrath Kumar</h2>
+                        <p className="text-gray-500">Software Designer</p>
                     </div>
                 </div>
             </section>

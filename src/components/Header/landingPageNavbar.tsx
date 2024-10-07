@@ -11,7 +11,7 @@ const navbar = () => {
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link href="" className="flex items-center transform scale-100 hover:scale-110 transition-transform duration-300 ease-in-out">
                         <Image src={Logo} className="h-10 w-10 mr-3" alt="Logo" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">LeetCode</span>
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CodeBuzz</span>
                     </Link>
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul className="font-thin flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
