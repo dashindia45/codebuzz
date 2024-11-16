@@ -93,7 +93,7 @@ export const POST = async (req: NextRequest) => {
             data: null,
             message: 'Error during execution',
             success: false,
-            //  error: error.message,
+             error: error.message,
         });
     }
 };

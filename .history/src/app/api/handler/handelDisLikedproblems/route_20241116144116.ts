@@ -50,7 +50,7 @@ export const POST = async (req: NextRequest) => {
     try {
         // Prepare the update object for the disliked problem
         const updateObject: Record<string, any> = {};
-        updateObject[`problemList.${index}.dislike`] = disLike;
+        updateObject[`problemList.${index}.dislike] = disLike;
 
         // Update the user's problem list
         await updateUserById(user._id, updateObject);

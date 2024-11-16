@@ -44,10 +44,10 @@ const ProblemDescription = ({ user, problems }: props) => {
     useEffect(() => {
         if (problems) {
             problems.forEach((problem: any, index) => {
-                if (problem.id === params.id) {
+                // if (problem.id === params.id) {
                     setClickedProblems(problem);
                     setClickedProblemId(problem._id);
-                }
+                // }
             })
         }
 

@@ -18,59 +18,44 @@ const Home = () => {
     const [firstSentenceIndex, setFirstSentenceIndex] = useState(0);
     const [secondSentenceIndex, setSecondSentenceIndex] = useState(0);
 
-    const sentences = ["CodeBuzz is the best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.", "Explore is a well-organized tool that helps you get the most out of LeetCode by providing structure to guide your progress towards the next step in your programming career."]
+    const sentences = React.useMemo(()=>["CodeBuzz is the best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.", "Explore is a well-organized tool that helps you get the most out of CodeBuzz by providing structure to guide your progress towards the next step in your programming career."],[]);
 
     useEffect(() => {
-
-
-        // Split the first sentence into characters
         const firstSentenceArray = sentences[0].split('');
         setFirstSentenceCharacters(firstSentenceArray);
-
-        // Split the second sentence into characters
+    
         const secondSentenceArray = sentences[1].split('');
         setSecondSentenceCharacters(secondSentenceArray);
-
-        // Use intervals to update the indices for both sentences
+    
         const firstSentenceInterval = setInterval(() => {
-            setFirstSentenceIndex(prevIndex => prevIndex + 1);
+            setFirstSentenceIndex((prevIndex) => prevIndex + 1);
         }, 50);
-
+    
         const secondSentenceInterval = setInterval(() => {
-            setSecondSentenceIndex(prevIndex => prevIndex + 1);
+            setSecondSentenceIndex((prevIndex) => prevIndex + 1);
         }, 50);
-
-        // Clear the intervals when all characters have been processed
-        if (firstSentenceIndex === firstSentenceArray.length) {
-            clearInterval(firstSentenceInterval);
-        }
-        if (secondSentenceIndex === secondSentenceArray.length) {
-            clearInterval(secondSentenceInterval);
-        }
-
-        // Cleanup: clear the intervals if the component unmounts
+    
         return () => {
             clearInterval(firstSentenceInterval);
             clearInterval(secondSentenceInterval);
         };
-
-    }, []);
+    }, [firstSentenceIndex, secondSentenceIndex, sentences]);
 
     useEffect(() => {
         const handleScroll = () => {
             const appearPosition = 400;
             const scrollY = window.scrollY;
-
-            if (scrollY >= appearPosition) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
+    
+            setIsVisible(scrollY >= appearPosition);
         };
-
+    
         window.addEventListener('scroll', handleScroll);
-
+    
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
+
     return (
         <div className='bg-gradient-to-r from-zinc-800 to-slate-800 px-28'>
 
@@ -127,7 +112,7 @@ const Home = () => {
                 <div className="container px-5 py-24 mx-auto">
                     <div className={`flex flex-wrap w-full mb-20 ${isVisible ? "opacity-100 transition-opacity duration-2000" : "opacity-0 transition-opacity duration-500"}`}>
                         <div className=" lg:w-1/2 w-full mb-6 lg:mb-0">
-                            <h1 className="flex justify-end mt-10 sm:text-3xl text-2xl text-right font-medium title-font mb-2 text-indigo-300"> "Code, test, and repeat. That's the way of the programmer."</h1>
+                            <h1 className="flex justify-end mt-10 sm:text-3xl text-2xl text-right font-medium title-font mb-2 text-indigo-300"> &quot;Code, test, and repeat. That&apos;s the way of the programmer.&quot;</h1>
 
                         </div>
                         <div className='w-1 h-36 m-5 bg-lime-300'></div>

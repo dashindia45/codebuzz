@@ -7,24 +7,24 @@
 
 // export const POST = async (req: NextRequest, res: NextResponse) => {
 //     const data = await req.json();
-//     const { disLike, index, user } = data;
+//     const { like, index, user } = data;
 
 //     try {
-
 //         const updateObject: Record<string, any> = {};
-//         updateObject[`problemList.${index}.dislike`] = disLike;
+//         updateObject[`problemList.${index}.like`] = like;
 //         await updateUserById(user._id, updateObject);
 
 
-//         const updatedUser = await getUserById(user._id);
+//         const updatedUser = await getUserById(user._id)
 
-//         const dislikedProblems = updatedUser.problemList.filter((problem: any) => problem.dislike === true)
+//         const likedProblems = updatedUser.problemList.filter((problem: any) => problem.like === true);
 
-//         await updateUserById(user._id, {totalDisLikes: dislikedProblems.length});
-        
+
+//         // Update 'totalLikes' in a single call
+//         await updateUserById(user._id, { totalLikes: likedProblems.length });
 
 //         const response = NextResponse.json({
-//             message: "DisLiked Successfully",
+//             message: "Liked Successfully",
 //             success: true,
 //         })
 
@@ -45,35 +45,30 @@ connectDB();
 
 export const POST = async (req: NextRequest) => {
     const data = await req.json();
-    const { disLike, index, user } = data;
+    const { like, index, user } = data;
 
     try {
-        // Prepare the update object for the disliked problem
         const updateObject: Record<string, any> = {};
-        updateObject[`problemList.${index}.dislike`] = disLike;
-
-        // Update the user's problem list
+        updateObject[`problemList.${index}.like] = like;
         await updateUserById(user._id, updateObject);
 
-        // Retrieve the updated user data
         const updatedUser = await getUserById(user._id);
 
-        // Calculate the total disliked problems
-        const dislikedProblems = updatedUser.problemList.filter((problem: any) => problem.dislike === true);
+        const likedProblems = updatedUser.problemList.filter((problem: any) => problem.like === true);
 
-        // Update the total dislikes
-        await updateUserById(user._id, { totalDisLikes: dislikedProblems.length });
+        // Update 'totalLikes' in a single call
+        await updateUserById(user._id, { totalLikes: likedProblems.length });
 
-        // Return the success response
+        // Return a success response
         return NextResponse.json({
-            message: "Disliked Successfully",
+            message: "Liked Successfully",
             success: true,
         });
 
     } catch (error) {
         console.error(error);
-        
-        // Return an error response
+
+        // Return an error response with status 500
         return NextResponse.json(
             { message: "Something went wrong", success: false },
             { status: 500 }

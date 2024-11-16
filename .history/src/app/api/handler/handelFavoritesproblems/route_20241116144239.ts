@@ -44,7 +44,7 @@ export const POST = async (req: NextRequest) => {
     try {
         // Prepare the update object for the favorite problem
         const updateObject: Record<string, any> = {};
-        updateObject[`problemList.${index}.favorite`] = favorite;
+        updateObject[problemList.${index}.favorite] = favorite;
 
         // Update the user's problem list with the new favorite status
         await updateUserById(user._id, updateObject);
