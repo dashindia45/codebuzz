@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import Logo from '@/assets/logo2.webp'
+import Logo from '@/assets/logo2.png'
+import Link from 'next/link'
 import { FaChevronLeft, FaChevronRight, FaUserAlt } from 'react-icons/fa'
 import { PiSignOutBold } from "react-icons/pi";
 import Timer from "@/components/Timer/timer";
@@ -59,9 +60,14 @@ const problemPageNavbar = ({ problems }: props) => {
         <div>
             <header className={`flex items-center justify-between text-gray-600 body-font px-10 py-3 bg-gradient-to-r from-zinc-800 to-slate-800 `} >
                 <div className="container mx-auto flex flex-col flex-wrap md:flex-row items-center">
-                    <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                    {/* <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                         <Image src={Logo} alt={''} className='w-6 h-6' />
-                    </div>
+                    </div> */}
+                    
+                    <Link href="" className="flex items-center transform scale-100 hover:scale-110 transition-transform duration-300 ease-in-out">
+                        <Image src={Logo} className="h-8 w-8 mr-3" alt="Logo" />
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CodeBuzz</span>
+                    </Link>
                     <div className='flex items-center gap-4 flex-1 justify-center'>
                         <div
                             className='flex items-center justify-center rounded bg-dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer hover:text-white'

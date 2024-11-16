@@ -5,8 +5,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
-  title: 'LeetCode Clone',
-  description: 'Created by Ayan Saha',
+  title: 'CodeBuzz',
+  description: 'Created by Group10',
 }
 
 export default function RootLayout({

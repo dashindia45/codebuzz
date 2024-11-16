@@ -8,6 +8,7 @@ import { ImYoutube2 } from "react-icons/im";
 import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
 import { useRouter } from 'next/navigation';
 import { Users, ProblemList } from '@/helpers/type';
+import Explore from '../../explore/Explore';
 
 const page = ({ params }: any) => {
 
@@ -53,7 +54,7 @@ const page = ({ params }: any) => {
     return (
         <div>
             <AcountNavbar colour={"bg-gradient-to-r from-zinc-800 to-slate-800"} hoverColour={"white"} />
-
+            <Explore/>
             <div className="p-10">
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <div className="p-4 bg-white dark:bg-gray-900">

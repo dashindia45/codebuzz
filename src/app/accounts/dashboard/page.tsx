@@ -86,14 +86,14 @@ const page = () => {
 
           <div className="mt-20 text-center border-b pb-12">
             <h1 className="text-4xl font-medium text-gray-700">{user?.username}</h1>
-            <p className="font-light text-gray-600 mt-3">Kolkata</p>
+            <p className="font-light text-gray-600 mt-3">India</p>
 
             <p className="mt-8 text-gray-500">Email - {user?.email}</p>
             <p className="mt-2 text-gray-500">Computer Science</p>
           </div>
 
           <div className="mt-12 flex flex-col justify-center">
-            <p className="text-gray-600 text-center font-light lg:px-16">Made By - Ayan Saha 
+            <p className="text-gray-600 text-center font-light lg:px-16">Made By - Group 10 
             <br/>
             eat {`->`} code {`->`} sleep
             </p>

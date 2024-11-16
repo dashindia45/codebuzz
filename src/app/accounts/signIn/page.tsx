@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import Logo from '@/assets/logo2.webp'
+import Logo from '@/assets/logo2.png'
 import Navbar from '@/components/Header/acountNavbar'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -50,14 +50,14 @@ const page = () => {
 
   return (
     <div>
-      <Navbar colour={""} hoverColour={"gray-900"}/>
+      {/* <Navbar colour={""} hoverColour={"gray-900"}/> */}
 
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gray-300">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm p-10 bg-white">
           <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
 
-            <Image className="mx-auto h-10 w-auto" src={Logo} alt="Logo" />
-            <h2 className="mt-10 pb-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">LeetCode</h2>
+            <Image className="mx-auto h-12 w-auto" src={Logo} alt="Logo1" />
+            <h2 className="mt-10 pb-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">CodeBuzz</h2>
             <form className="space-y-6" onSubmit={onSignin}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-400">Email address</label>

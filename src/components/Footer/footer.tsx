@@ -8,8 +8,8 @@ const footer = () => {
             <footer className="text-gray-600 body-font">
                 <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
                     
-                    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 CodeBuzz —
-                        <a href="https://twitter.com/" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Dashrath Kumar</a>
+                    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 CodeBuzz —
+                        <a href="https://twitter.com/" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Group 10</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                         <a className="text-gray-500">
@@ -18,10 +18,10 @@ const footer = () => {
                         <a className="ml-3 text-gray-500">
                             <BsTwitter size={20} color='white'/>
                         </a>
-                        <a className="ml-3 text-gray-500">
+                        <a href="https://www.instagram.com/__i_m______dashrath2003/?utm_source=qr&igsh=ZW11MzVsYmg3NGpv" className="ml-3 text-gray-500">
                             <BsInstagram size={20} color='white'/>
                         </a>
-                        <a className="ml-3 text-gray-500">
+                        <a  href="https://www.linkedin.com/in/dashrath-kumar-37936b26a?originalSubdomain=in" className="ml-3 text-gray-500">
                             <BsLinkedin size={20} color='white'/>
                         </a>
                     </span>

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Navbar from '@/components/Header/acountNavbar'
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '@/assets/logo2.webp'
+import Logo from '@/assets/logo2.png'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import { toast } from 'react-toastify'
@@ -62,13 +62,41 @@ const page = () => {
 }
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gray-300">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm p-10 bg-white">
           <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
 
-            <Image className="mx-auto h-10 w-auto" src={Logo} alt="Logo" />
-            <h2 className="mt-10 pb-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">LeetCode</h2>
+          <style jsx>{`
+  @keyframes moveLogo {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+`}</style>
+
+<Image
+  className="mx-auto h-12 w-auto hover:animate-none transition-transform duration-500"
+  src={Logo}
+  alt="Logo"
+  //style={{ animation: 'moveLogo 1s infinite' }}
+/>
+
+
+
+
+
+
+
+
+
+            <h2 className="mt-10 pb-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">CodeBuzz</h2>
             <form className="space-y-6" onSubmit={onSignup}>
               <div>
 
@@ -119,7 +147,7 @@ const page = () => {
 
             <p className="mt-10 text-center text-sm text-gray-400">
               Do you have An Account ?&nbsp;
-              <Link href="/accounts/login" className="font-semibold leading-6 text-gray-500 hover:text-black">SignIn</Link>
+              <Link href="/accounts/signIn" className="font-semibold leading-6 text-gray-500 hover:text-black">SignIn</Link>
             </p>
           </div>
 

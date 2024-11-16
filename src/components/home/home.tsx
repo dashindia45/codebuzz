@@ -1,10 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import {BiSolidQuoteRight} from 'react-icons/bi'
-import Plate from '@/assets/plate.png'
+import Plate from '@/assets/image.png'
 import Java from "@/assets/java.png";
 import JavaScript from "@/assets/js.png";
 import Python from "@/assets/python.png";
+import Cpp from "@/assets/cpp.png";
 import Me from "@/assets/me1.png";
 import Image from 'next/image'
 import { useRouter } from "next/navigation";
@@ -17,7 +18,7 @@ const home = () => {
     const [firstSentenceIndex, setFirstSentenceIndex] = useState(0);
     const [secondSentenceIndex, setSecondSentenceIndex] = useState(0);
 
-    const sentences = ["LeetCode is the best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.", "Explore is a well-organized tool that helps you get the most out of LeetCode by providing structure to guide your progress towards the next step in your programming career."]
+    const sentences = ["CodeBuzz is the best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.", "Explore is a well-organized tool that helps you get the most out of LeetCode by providing structure to guide your progress towards the next step in your programming career."]
 
     useEffect(() => {
 
@@ -76,7 +77,7 @@ const home = () => {
             <section className="text-gray-600 body-font">
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div className="transform scale-100 hover:scale-110 transition-transform duration-300 ease-in-out lg:w-72 md:w-2/4 w-5/6 mb-10 md:mb-0">
-                        <Image className="object-cover object-center rounded-[30px] origin-bottom -rotate-12 lg:ml-24" alt="ICOn" src={Plate} />
+                        <Image className="object-cover object-center rounded-[30px] origin-bottom -rotate-0 lg:ml-24" alt="ICOn" src={Plate} />
                     </div>
                     <div className="lg:flex-grow lg:w-2/4 md:w-1/2 lg:pl-80 md:pl-16 flex flex-col md:items-start md:text-left justify-center items-center text-center">
                         <h1 className="title-font sm:text-5xl text-3xl mb-4 font-medium text-white">A New Way to Learn
@@ -114,6 +115,9 @@ const home = () => {
                         </div>
                         <div className='animate-[sizeIncrease_10s_infinite] relative w-28 h-28 m-1'>
                             <Image src={Python} alt={''} />
+                        </div>
+                        <div className='animate-[sizeIncrease_6s_infinite] relative w-20 h-20 m-1'>
+                            <Image src={Cpp} alt={''} />
                         </div>
                     </div>
                 </div>
