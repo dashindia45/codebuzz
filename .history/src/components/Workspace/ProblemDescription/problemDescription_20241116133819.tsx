@@ -245,4 +245,4 @@ const ProblemDescription = ({ user, problems }: props) => {
     )
 }
 
-export default ProblemDescription
+export default problemDescription

@@ -10,7 +10,8 @@ import Me from "@/assets/me1.png";
 import Image from 'next/image'
 import { useRouter } from "next/navigation";
 
-const Home = () => {
+const 
+Home = () => {
     const router = useRouter();
     const [isVisible, setIsVisible] = useState(false);
     const [firstSentenceCharacters, setFirstSentenceCharacters] = useState<string[]>([]);
@@ -190,4 +191,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default home

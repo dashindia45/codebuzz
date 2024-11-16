@@ -100,4 +100,4 @@ const ProblemPageNavbar = ({ problems }: props) => {
     )
 }
 
-export default ProblemPageNavbar
+export default problemPageNavbar

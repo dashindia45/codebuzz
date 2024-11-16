@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineFullscreen, AiOutlineFullscreenExit, AiOutlineSetting } from 'react-icons/ai';
 
-const PlaygroundNavbar = () => {
+const playgroundNavbar = () => {
     const [isFullScreen, setIsFullScreen] = useState(false);
 
     const handleFullScreen = () => {
@@ -63,4 +63,4 @@ const PlaygroundNavbar = () => {
     );
 }
 
-export default PlaygroundNavbar
+export default playgroundNavbar

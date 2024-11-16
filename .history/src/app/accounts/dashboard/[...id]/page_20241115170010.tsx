@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 import { Users, ProblemList } from '@/helpers/type';
 import Explore from '../../explore/Explore';
 
-const Page = ({ params }: any) => {
+const page = ({ params }: any) => {
 
     const router = useRouter();
     const [problems, setProblems] = useState([]);
@@ -148,4 +148,4 @@ const Page = ({ params }: any) => {
     )
 }
 
-export default Page
+export default page

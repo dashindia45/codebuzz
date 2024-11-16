@@ -12,7 +12,7 @@ type props = {
 	problems: [Problem],
 }
 
-const Workspace = ({ users, problems }: props) => {
+const workspace = ({ users, problems }: props) => {
 	const { width, height } = useWindowSize();
 	const [success, setSuccess] = useState(false);
 
@@ -39,4 +39,4 @@ const Workspace = ({ users, problems }: props) => {
 	);
 }
 
-export default Workspace
+export default workspace

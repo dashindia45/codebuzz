@@ -34,7 +34,7 @@ const Playground = ({ user, problems, setSuccess }: Props) => {
         // if (problem.id === params.id) {
           setClickedProblems(problem);
           setClickedProblemId(problem._id);
-        // }
+        }
       });
     }
   }, [problems]);

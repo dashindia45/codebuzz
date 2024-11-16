@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { MdAlarm } from 'react-icons/md';
 import { RiTimerFlashLine } from "react-icons/ri";
 
-const Timer = () => {
+const timer = () => {
     const [showTimer, setShowTimer] = useState<boolean>(false);
     const [time, setTime] = useState<number>(0);
 
@@ -53,4 +53,4 @@ const Timer = () => {
     )
 }
 
-export default Timer;
+export default timer;

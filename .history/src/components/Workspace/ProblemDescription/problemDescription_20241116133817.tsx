@@ -13,7 +13,9 @@ type props = {
     problems: [Problem],
 }
 
-const ProblemDescription = ({ user, problems }: props) => {
+const 
+
+ProblemDescription = ({ user, problems }: props) => {
 
     const params = useParams<any>();
     const [clickedProblems, setClickedProblems] = useState<Problem>();
@@ -245,4 +247,4 @@ const ProblemDescription = ({ user, problems }: props) => {
     )
 }
 
-export default ProblemDescription
+export default problemDescription

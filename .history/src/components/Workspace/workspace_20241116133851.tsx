@@ -39,4 +39,4 @@ const Workspace = ({ users, problems }: props) => {
 	);
 }
 
-export default Workspace
+export default workspace

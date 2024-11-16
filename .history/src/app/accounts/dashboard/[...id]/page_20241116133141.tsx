@@ -148,4 +148,4 @@ const Page = ({ params }: any) => {
     )
 }
 
-export default Page
+export default page

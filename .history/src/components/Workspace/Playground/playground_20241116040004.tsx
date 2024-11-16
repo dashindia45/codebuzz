@@ -31,10 +31,10 @@ const Playground = ({ user, problems, setSuccess }: Props) => {
   useEffect(() => {
     if (problems) {
       problems.forEach((problem: any) => {
-        // if (problem.id === params.id) {
+        if (problem.id === params.id) {
           setClickedProblems(problem);
           setClickedProblemId(problem._id);
-        // }
+        }
       });
     }
   }, [problems]);

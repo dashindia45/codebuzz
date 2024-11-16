@@ -63,4 +63,4 @@ const PlaygroundNavbar = () => {
     );
 }
 
-export default PlaygroundNavbar
+export default playgroundNavbar
