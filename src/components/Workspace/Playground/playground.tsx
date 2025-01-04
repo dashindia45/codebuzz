@@ -31,13 +31,13 @@ const Playground = ({ user, problems, setSuccess }: Props) => {
   useEffect(() => {
     if (problems) {
       problems.forEach((problem: any) => {
-        if (problem.id === params.id) {
+        // if (problem.id === params.id) {
           setClickedProblems(problem);
           setClickedProblemId(problem._id);
-        }
+        // }
       });
     }
-  }, [problems]);
+  }, [problems,params.id]);
 
   // When the user comes to the particular code section, display previously written code
   useEffect(() => {
@@ -47,7 +47,7 @@ const Playground = ({ user, problems, setSuccess }: Props) => {
     } else {
       setUserCode(JSON.parse(code));
     }
-  }, [clickedProblems?.id]);
+  }, [clickedProblems?.id,clickedProblems?.starterCode]);
 
   const handleCodeChange = (value: string) => {
     setUserCode(value);

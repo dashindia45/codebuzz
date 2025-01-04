@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import { Users } from '@/helpers/type';
 
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [user, setUser] = useState<Users>();
 
@@ -107,4 +107,4 @@ const page = () => {
 }
 
 
-export default page
+export default Page

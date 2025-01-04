@@ -6,7 +6,7 @@ import axios from 'axios'
 
 
 
-const page = () => {
+const Page = () => {
 
   const [users, setUsers] = useState<any>();
   const [problems, setProbelems] = useState<any>();
@@ -37,4 +37,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

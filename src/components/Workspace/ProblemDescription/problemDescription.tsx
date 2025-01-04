@@ -13,7 +13,7 @@ type props = {
     problems: [Problem],
 }
 
-const problemDescription = ({ user, problems }: props) => {
+const ProblemDescription = ({ user, problems }: props) => {
 
     const params = useParams<any>();
     const [clickedProblems, setClickedProblems] = useState<Problem>();
@@ -44,10 +44,10 @@ const problemDescription = ({ user, problems }: props) => {
     useEffect(() => {
         if (problems) {
             problems.forEach((problem: any, index) => {
-                if (problem.id === params.id) {
+                // if (problem.id === params.id) {
                     setClickedProblems(problem);
                     setClickedProblemId(problem._id);
-                }
+                // }
             })
         }
 
@@ -245,4 +245,4 @@ const problemDescription = ({ user, problems }: props) => {
     )
 }
 
-export default problemDescription
+export default ProblemDescription

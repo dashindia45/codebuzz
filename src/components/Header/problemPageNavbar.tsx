@@ -15,7 +15,7 @@ type props = {
     problems: [Problem]
 }
 
-const problemPageNavbar = ({ problems }: props) => {
+const ProblemPageNavbar = ({ problems }: props) => {
     const router = useRouter();
     const {id} = useParams();
     
@@ -100,4 +100,4 @@ const problemPageNavbar = ({ problems }: props) => {
     )
 }
 
-export default problemPageNavbar
+export default ProblemPageNavbar

@@ -1,7 +1,7 @@
 
-# LeetCode Clone with Next.js and MongoDB
+# CodeBuzz with Next.js and MongoDB
 
-Welcome to LeetCode-clone, a dynamic coding challenge platform built with Next.js and MongoDB. This platform not only provides a vast array of algorithmic problems for users to solve but also features automatic testcase evaluation to streamline the learning process.
+Welcome to CodeBuzz, a dynamic coding challenge platform built with Next.js and MongoDB. This platform not only provides a vast array of algorithmic problems for users to solve but also features automatic testcase evaluation to streamline the learning process.
 
 
 ## Key Features:

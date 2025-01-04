@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const page = () => {
+const Page = () => {
   const router =  useRouter();
   const [userName, setUserName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -158,4 +158,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
